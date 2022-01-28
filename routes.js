@@ -8,6 +8,18 @@ const router = express.Router();
 
 // --------------- API REST CRUD
 
+router.get    ("/animales",      cors(), controller.readAnimales);   // Read All
+router.get    ("/animales/:id",  cors(), controller.readAnimal);    // Read
+router.delete ("/animales/:id",  cors(), controller.deleteAnimal);  // Delete
+router.put    ("/animales/:id",  cors(), controller.updateAnimal);  // Update
+router.post   ("/animales",      cors(), controller.createAnimal);  // Create
+
+router.get    ("/personal",     cors(), controller.readPersonas);  // Read All
+router.get    ("/personal/:id", cors(), controller.readPersonal);   // Read
+router.delete ("/personal/:id", cors(), controller.deletePersonal); // Delete
+router.put    ("/personal/:id", cors(), controller.updatePersonal); // Update
+router.post   ("/personal",     cors(), controller.createPersonal); // Create
+
 router.get    ("/clientes",      cors(), controller.readClientes);   // Read All
 router.get    ("/clientes/:id",  cors(), controller.readCliente);    // Read
 router.delete ("/clientes/:id",  cors(), controller.deleteCliente);  // Delete
@@ -20,5 +32,5 @@ router.delete ("/articulos/:id", cors(), controller.deleteArticulo); // Delete
 router.put    ("/articulos/:id", cors(), controller.updateArticulo); // Update
 router.post   ("/articulos",     cors(), controller.createArticulo); // Create
 
-
 module.exports = router;
+
