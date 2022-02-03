@@ -9,18 +9,18 @@ const Articulo = mongoose.model('Articulo',
 );
 
 const Animal = mongoose.model('Animal',
-  new mongoose.Schema({ nombre: String, apellidos: String })
+  new mongoose.Schema({ nombre: String, tipo: String })
 );
 
 const Personal = mongoose.model('Personal',
-  new mongoose.Schema({ nombre: String, precio: Number })
+  new mongoose.Schema({ nombre: String, apellidos: String })
 );
 
 module.exports = {
   Cliente: Cliente,
   Articulo: Articulo,
   Animal: Animal,
-  Perosnal: Personal
+  Personal: Personal
 }
 
 // Otra forma más corta:
